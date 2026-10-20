@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Bautista Rescala</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+    <section>
+        <h1>
+            Hola, Mi nombre es Bautista Rescala
+        </h1>
+        <div>
+            Soy un programador y técnico en sistemas informáticos. Soy graduado de la carrera tecnicatura en
+            programación en la -UTN-
+            regional de Reconquista. Nací en la ciudad de Reconquista, Santa Fe de Argentina y tengo 24 años.
+        </div>
+    </section>
+    <section>
+        <h2>Sobre mi</h2>
+        <div class="crt">
+            <p>
+                Me considero una persona ordenada y metódica. No es sorpresa entonces que me interesen las computadoras, una vez llamadas "Ordenadores". Antes de haberme inmerso en el mundo de la computación me interesaban por que las veía como una herramienta para explorar conocimientos y aprender nuevas cosas pero ahora se que también representan un esfuerzo colaborativo entre incontables individuos para transformar el mundo. Elegí la informática por que quiero contribuir con mi pequeño grano de arena a este proyecto y hacer mejor el mundo. 
+            </p>
+            <img style="max-height: 15em;" src="/assets/crt.png" alt="A drawn crt monitor">
+        </div>
+        <div class="crt">
+            <img style="max-height: 15em;" src="assets/bubbble.png" alt="a Utah teapot wireframe">
+            <p>A pesar de mi fascinación con la tecnología no sigo el estereotipo al pie de la letra. Me gusta relacionarme con otras personas y trabajar en conjunto. Creo que entender a los demas y comunicar ideas es una de las partes mas importantes del trabajo. <br><br>
+
+            Al final del dia el valor de cualquier tecnología existe en función del uso que le damos las personas. 
+            </p>
+        </div>
+        <div class="crt">
+            <p>
+            Especialmente me cautiva el software que permite a las computadoras crear imágenes y arte digital.
+            La programación de gráficos combina múltiples disciplinas que me apasionan: matematica, analisis visual y creatividad.<br> <br>
+            Ahora mismo estoy aprendiendo a crear arte con código a través de shaders y utilizando el motor gráfico <a href="https://godotengine.org/">Godot</a>.
+            </p>
+            <img style="max-height: 15em;" src="assets/pot.png" alt="a Utah teapot wireframe">
+        </div>
+    </section>
+    <section class="end">
+        <h3>Ponte en contacto</h3>
+        <p>Comunícate conmigo a través de mi correo</p>
+        <p><strong>bautistarescala@gmail.com</strong>  <button class="button" id="copyBtn">COPIAR</button></p>
+    </section>
+</body>
+<script>
+    const btn = document.getElementById('copyBtn');
+
+    btn.addEventListener('click',async () => {
+        try{
+            await navigator.clipboard.writeText("bautistarescala@gmail.com");
+            btn.textContent = "✓";
+        }catch(err){
+            console.error('Copy failed:', err);
+        }
+    })
+</script>
+</html>
